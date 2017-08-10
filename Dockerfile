@@ -32,7 +32,7 @@ RUN mkdir -p /usr/local/etc && \
 
 # Download ruby source
 ADD https://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz /tmp
-RUN ls -lah /tmp
+RUN tar -xzf /tmp/ruby-$RUBY_VERSION.tar.gz -C /tmp
 # Build and install ruby from source
 RUN cd /tmp/ruby-$RUBY_VERSION && ./configure --prefix=$DEFAULT_PREFIX --disable-install-doc
 RUN cd /tmp/ruby-$RUBY_VERSION && make 
