@@ -1,4 +1,4 @@
-# Docker image based on CentOS 7 with ruby 2.3.4
+# Docker image based on CentOS 7 with ruby 2.3.3 / 2.3.4
 
 ## Description
 This repository contains dockerfiles for building an image based on `centos/centos7` with ruby 2.3.3 / 2.3.4 included. 
