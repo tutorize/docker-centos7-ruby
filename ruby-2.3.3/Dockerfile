@@ -2,7 +2,7 @@
 # Dockerfile for centos 7 based image with ruby-2.3.4 installed.
 # Partly based on the official debian ruby image: https://github.com/docker-library/ruby
 
-FROM centos:centos7.3.1611
+FROM centos:centos7
 MAINTAINER TUTORize <developer@tutorize.com>
 
 # Ruby + version config
@@ -19,10 +19,10 @@ ENV BUNDLER_VERSION 1.15.3
 # - dbm
 # - gddm
 RUN yum update -y && \
-    yum install -y gcc-c++-4.8.5-11.el7 \
-                   openssl-devel-1.0.1e-60.el7_3.1.x86_64 \
-                   readline-devel-6.2-9.el7 \
-                   make-3.82-23.el7 && \
+    yum install -y gcc-c++ \
+                   openssl-devel \
+                   readline-devel \
+                   make && \
     yum clean all -y
 
 # Do not install documentation for gems
