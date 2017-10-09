@@ -2,7 +2,7 @@
 # Dockerfile for centos 7 based image with ruby-2.3.4 installed.
 # Partly based on the official debian ruby image: https://github.com/docker-library/ruby
 
-FROM centos:centos7
+FROM centos:centos7.3.1611
 MAINTAINER TUTORize <developer@tutorize.com>
 
 # Ruby + version config
